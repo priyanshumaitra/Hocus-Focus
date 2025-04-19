@@ -2,8 +2,23 @@ import { motion } from 'framer-motion';
 import { BrainCircuit, Eye, EyeOff, Menu, X } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
+import { logOut } from '../services/firebase';  
+import { useNavigate } from 'react-router-dom';
+import { LogOut } from 'lucide-react';
 
 export default function Navbar({ isTracking, setIsTracking }) {
+   const { currentUser } = useAuth();
+    const navigate = useNavigate();
+  
+    const handleLogout = async () => {
+      try {
+        await logOut();
+        // navigate("/login");
+      } catch (error) {
+        console.error("Error logging out:", error);
+      }
+    };
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navItems = [
     { name: 'Dashboard', path: '/' },
@@ -46,8 +61,36 @@ export default function Navbar({ isTracking, setIsTracking }) {
               </NavLink>
             ))}
           </div>
-          
           <div className="flex items-center gap-2">
+          {currentUser ? <><p className={({ isActive }) => 
+                  `px-3 py-2 rounded-md text-sm font-medium ${
+                    isActive
+                      ? 'bg-gray-800 text-white'
+                      : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                  }`
+                }>Logged in as: {currentUser.username?currentUser.username: currentUser.email}</p>
+      
+        <button
+  onClick={handleLogout}
+  className="flex items-center justify-center gap-2 py-2 px-4 rounded-md shadow-sm 
+            text-sm font-medium text-white bg-red-600 hover:bg-red-700 
+            transition-colors duration-200 focus:outline-none focus:ring-2 
+            focus:ring-red-500 focus:ring-offset-2"
+>
+  <LogOut className="h-4 w-4" /> {/* Add your logout icon component */}
+  Logout
+</button></>: <button
+  onClick={() => navigate("/login")}
+  className="flex items-center justify-center gap-2 py-2 px-4 rounded-md shadow-sm 
+            text-sm font-medium text-white bg-red-600 hover:bg-red-700 
+            transition-colors duration-200 focus:outline-none focus:ring-2 
+            focus:ring-red-500 focus:ring-offset-2"
+>
+  <LogOut className="h-4 w-4" /> {/* Add your logout icon component */}
+  login
+</button>}
+          
+            
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

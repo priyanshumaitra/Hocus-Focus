@@ -4,6 +4,9 @@ import { Eye, EyeOff, Keyboard, Gauge, BrainCircuit, Shield, Settings, BarChart2
 import { Clock, Calendar, TrendingUp, AlertCircle, Target } from 'lucide-react';
 import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Nav from '../navbar/Nav';
+import { useAuth } from '../context/AuthContext';
+import { logOut } from '../services/firebase';
+import { useNavigate } from 'react-router-dom';
 
 const focusData = [
   { name: 'Mon', focus: 75 },
@@ -31,7 +34,17 @@ const realTimeData = Array.from({ length: 30 }, (_, i) => ({
 
 
 export default function HomePage() {
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/login");
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
     
   const [isTracking, setIsTracking] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -61,7 +74,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100">
       {/* Navigation */}
       <Nav/>
-
+          
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <AnimatePresence>
