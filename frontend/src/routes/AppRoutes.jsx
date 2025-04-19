@@ -7,6 +7,7 @@ import Settings from '../pages/Settings.jsx'
 import BlockedSitesPage from '../pages/BlockSites.jsx'
 import Sessions from '../pages/Sessions.jsx'
 import SignUp from '../pages/SignUp.jsx'
+import Login from '../pages/Login.jsx'
 
 
 const AppRoutes = () => {
@@ -20,6 +21,7 @@ const AppRoutes = () => {
             <Route path="/block" element={<BlockedSitesPage/>} />
             <Route path="/sessions" element={<Sessions/>} />
             <Route path="/signup" element={<SignUp/>} />
+            <Route path="/login" element={<Login/>} />
         </Routes>
     </BrowserRouter>
   )
