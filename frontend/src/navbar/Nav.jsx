@@ -31,7 +31,7 @@ export default function Navbar({ isTracking, setIsTracking }) {
   ];
 
   return (
-    <nav className="border-b border-gray-700">
+    <nav className="fixed w-full border-b border-gray-700 bg-[#1e2939]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div 
@@ -91,7 +91,7 @@ export default function Navbar({ isTracking, setIsTracking }) {
 </button>}
           
             
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsTracking(!isTracking)}
@@ -110,7 +110,7 @@ export default function Navbar({ isTracking, setIsTracking }) {
                   Start Tracking
                 </>
               )}
-            </motion.button>
+            </motion.button> */}
 
             {/* Mobile menu button */}
             <button
@@ -152,7 +152,7 @@ export default function Navbar({ isTracking, setIsTracking }) {
                 {item.name}
               </NavLink>
             ))}
-            <button
+            {/* <button
               onClick={() => {
                 setIsTracking(!isTracking);
                 setMobileMenuOpen(false);
@@ -172,7 +172,7 @@ export default function Navbar({ isTracking, setIsTracking }) {
                   Start Tracking
                 </>
               )}
-            </button>
+            </button> */}
           </div>
         </motion.div>
       )}

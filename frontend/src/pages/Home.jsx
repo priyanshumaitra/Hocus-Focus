@@ -71,12 +71,12 @@ export default function HomePage() {
   }, [isTracking]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100">
+    <div className=" min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100">
       {/* Navigation */}
       <Nav/>
           
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="pt-[70px] md:pt-[80px] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <AnimatePresence>
           {showNotification && (
             <motion.div
