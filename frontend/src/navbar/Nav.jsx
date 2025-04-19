@@ -12,6 +12,7 @@ export default function Navbar({ isTracking, setIsTracking }) {
     { name: 'Blocked Sites', path: '/block' },
     { name: 'Settings', path: '/settings' },
     { name: 'SignUp', path: '/signup' },
+    { name: 'Eye-Tracking', path: '/eye-tracking' },
   ];
 
   return (
@@ -24,7 +25,7 @@ export default function Navbar({ isTracking, setIsTracking }) {
             className="flex items-center"
           >
             <BrainCircuit className="h-8 w-8 text-indigo-400" />
-            <a href='/' className="ml-2 text-xl font-bold">Zenith</a>
+            <a href='/' className="ml-2 text-xl font-bold">HocusFocus</a>
           </motion.div>
           
           {/* Desktop Navigation */}

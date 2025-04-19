@@ -444,10 +444,10 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <BrainCircuit className="h-6 w-6 text-indigo-400 mr-2" />
-              <span className="text-lg font-semibold">Zenith</span>
+              <span className="text-lg font-semibold">HocusFocus</span>
             </div>
             <div className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Zenith. All rights reserved.
+              © {new Date().getFullYear()} HocusFocus. All rights reserved.
             </div>
           </div>
         </div>
