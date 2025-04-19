@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hocus-Focus</title>
+  <style>
+    body {
+      width: 320px;
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 16px;
+      background-color: #1f2937;
+      color: white;
+    }
+    h1 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: #f3f4f6;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .active {
+      background-color: #10b981;
+    }
+    .inactive {
+      background-color: #ef4444;
+    }
+    button {
+      background-color: #6366f1;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    button:hover {
+      background-color: #4f46e5;
+    }
+    button.danger {
+      background-color: #ef4444;
+    }
+    button.danger:hover {
+      background-color: #dc2626;
+    }
+    .sites-list {
+      margin-top: 16px;
+      max-height: 200px;
+      overflow-y: auto;
+      background-color: #374151;
+      border-radius: 4px;
+      padding: 8px;
+    }
+    .site-item {
+      padding: 6px 8px;
+      border-bottom: 1px solid #4b5563;
+    }
+    .site-item:last-child {
+      border-bottom: none;
+    }
+    #focus-meter {
+            height: 20px;
+            background: #f0f0f0;
+            margin: 10px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #focus-bar {
+            height: 100%;
+            width: 100%;
+            background: #4CAF50;
+            transition: width 0.3s;
+        }
+  </style>
+</head>
+<body>
+  <h1>Hocus-Focus Website Blocker</h1>
+  
+  <div class="status">
+    <div id="blockingStatus" class="status-indicator inactive"></div>
+    <span id="blockingStatusText">Blocking Inactive</span>
+  </div>
+  
+  <div class="status">
+    <div id="focusStatus" class="status-indicator inactive"></div>
+    <span id="focusStatusText">Not Focused</span>
+  </div>
+  <h3>Focus Keeper</h3>
+  <div>Your focus score:</div>
+  <div id="focus-meter">
+    <div id="focus-bar"></div>
+  </div>
+  <div id="score-text">100%</div>
+  
+  <button id="toggleBlocking">Enable Blocking</button>
+  <button id="openApp">Open Hocus-Focus App</button>
+  
+  <h2 style="font-size: 16px; margin-top: 20px; margin-bottom: 8px;">Blocked Websites</h2>
+  <div id="blockedSites" class="sites-list"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
