@@ -1,8 +1,10 @@
+![Hocus-Focus](https://socialify.git.ci/Anurag300705/Hocus-Focus/image?forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
+
 # HocusFocus
 
 ## 📃 Overview
 
-We are building HocusFocus, a flow State Guardian app. The problem we're addressing is the constant struggle with digital distractions—like social media, notifications, and wandering attention—which makes it hard for people to maintain deep focus and productivity. Many existing tools block websites but don’t actually help users understand or improve their focus. Our goal is to create a system that not only monitors attention but also provides real-time feedback and actionable insights to help users achieve and sustain a flow state.
+We are building HocusFocus, a flow State Guardian app. The problem we're addressing is the constant struggle with digital distractions—like social media, notifications, and wandering attention—which makes it hard for people to maintain deep focus and productivity. Many existing tools block websites but don’t help users understand or improve their focus. Our goal is to create a system that monitors attention and provides real-time feedback and actionable insights to help users achieve and sustain a flow state.
 
 ---
 
@@ -12,7 +14,7 @@ We are building HocusFocus, a flow State Guardian app. The problem we're address
 
 - Real-time eye-tracking to monitor user focus and attention.
 - Browser extension for distraction detection and focus score.
-- Analytics dashboard visualizing focus sessions and distraction patterns.
+- An analytics dashboard visualizes focus sessions and distraction patterns.
 - Clean, accessible UI for easy session management and progress tracking.
 - Personalized focus recommendations based on user behavior.
 
