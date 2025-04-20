@@ -80,10 +80,10 @@ npm run build
 - **Now go to your browser, turn on developer mode and load the extension folder from the project.**
 ---
 
-## 📸 Screenshots & Demo Video
+## 📸 Snapshots
 
-### Demo Video:
-- **Check out our Demo on [YouTube]()**
+- ### Flow Diagram
+  ![architecture](https://github.com/user-attachments/assets/ff3f9afb-5f25-4b0c-b506-d72c20216202)
 
 - ### Landing Page
   ![1-landing-page](https://github.com/user-attachments/assets/d225c615-cbcb-439b-9cc1-aa394cf945a3)
