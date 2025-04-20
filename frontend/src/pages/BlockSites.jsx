@@ -48,9 +48,9 @@ export default function BlockedSitesPage() {
   };
 
   return (
-    <div className="bg-gray-900 rounded-xl p-6 shadow-lg text-gray-200">
+    <div className="bg-gray-900 p-6 shadow-lg text-gray-200">
       <Navbar/>
-      <div className="flex justify-between items-center mb-6">
+      <div className="pt-20 flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold flex items-center text-white">
           <Shield className="h-6 w-6 mr-2 text-indigo-400" />
           Blocked Websites
