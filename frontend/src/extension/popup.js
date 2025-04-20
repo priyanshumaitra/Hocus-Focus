@@ -27,7 +27,7 @@ toggleBlockingBtn.addEventListener('click', () => {
 
 // Open the main app
 openAppBtn.addEventListener('click', () => {
-  chrome.tabs.create({ url: 'http://localhost:5173/eye-tracking' });
+  chrome.tabs.create({ url: 'http://localhost:5173/' });
 });
 
 // Update UI based on state
