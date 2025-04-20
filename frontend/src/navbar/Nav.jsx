@@ -31,7 +31,7 @@ export default function Navbar({ isTracking, setIsTracking }) {
   ];
 
   return (
-    <nav className="fixed w-full border-b border-gray-700 bg-[#1e2939]">
+    <nav className="fixed top-0 z-50 w-full border-b border-gray-700 bg-[#1e2939]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div 
@@ -39,8 +39,8 @@ export default function Navbar({ isTracking, setIsTracking }) {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <img src={logo} alt="Example Image" className="w-[15rem] h-[7.5rem] pt-[1em] shadow-lg"/>
-            <a href='/' className="text-xl font-bold">HocusFocus</a>
+            <img src={logo} alt="Example Image" className="w-[9rem] h-[5rem] pt-[1em] shadow-lg"/>
+            <a href='/' className="text-2xl font-bold"><span className='text-blue-500'>Hocus</span>Focus</a>
           </motion.div>
           
           {/* Desktop Navigation */}
