@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import { logOut } from '../services/firebase';  
 import { useNavigate } from 'react-router-dom';
 import { LogOut } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 export default function Navbar({ isTracking, setIsTracking }) {
    const { currentUser } = useAuth();
@@ -26,7 +27,6 @@ export default function Navbar({ isTracking, setIsTracking }) {
     { name: 'Focus Sessions', path: '/sessions' },
     { name: 'Blocked Sites', path: '/block' },
     { name: 'Settings', path: '/settings' },
-    { name: 'SignUp', path: '/signup' },
     { name: 'Eye-Tracking', path: '/eye-tracking' },
   ];
 
@@ -39,8 +39,8 @@ export default function Navbar({ isTracking, setIsTracking }) {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <BrainCircuit className="h-8 w-8 text-indigo-400" />
-            <a href='/' className="ml-2 text-xl font-bold">HocusFocus</a>
+            <img src={logo} alt="Example Image" className="w-[15rem] h-[7.5rem] pt-[1em] shadow-lg"/>
+            <a href='/' className="text-xl font-bold">HocusFocus</a>
           </motion.div>
           
           {/* Desktop Navigation */}
