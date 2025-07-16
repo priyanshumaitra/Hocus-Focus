@@ -10,7 +10,7 @@ We are building HocusFocus, a flow State Guardian app. The problem we're address
 
 ## 🔮 Features
 
-**We plan to expand Hocus-Focus with the following features:**
+**We aim to expand Hocus-Focus with the following features:**
 
 - Real-time eye-tracking to monitor user focus and attention.
 - Browser extension for distraction detection and focus score.
